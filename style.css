@@ -1,0 +1,156 @@
+.clock{
+    background: #ececec;
+    width: 300px;
+    height: 300px; 
+    margin: 8% auto;
+    border-radius: 50%;
+    border: 14px solid #333;
+    position: relative;
+    box-shadow: 0 2vw 4vw -1vw rgba(0, 0, 0, 0.8);
+}
+
+.dot{
+    height: 14px;
+    width: 14px;
+    background: #000000;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+    z-index: 10;
+    box-shadow: 0 2px 4px -1px black;
+}
+
+.hour-hand{
+    width: 6px;
+    height: 56px;
+    background: blue;
+    z-index: 5;
+    position: absolute;
+    top: 88px;
+    transform-origin: 50% 72px;
+    left: 50%;
+    margin-left: -2px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.minute-hand{
+    width: 4px;
+    height: 100px;
+    background: #000000;
+    z-index: 6;
+    position: absolute;
+    top: 46px;
+    transform-origin: 50% 105px;
+    left: 50%;
+    margin-left: -2px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.second-hand{
+    width: 2px;
+    height: 120px;
+    background: red;
+    z-index: 7;
+    position: absolute;
+    top: 26px;
+    transform-origin: 50% 125px;
+    left: 50%;
+    margin-left: -1px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+span{
+    display: inline-block;
+    position: absolute;
+    color: #222222;
+    font-size: 22px;
+    font-weight: 700;
+    z-index: 4;
+}
+
+.h12{
+    top: 30px;
+    left: 50%;
+    margin-left: -9px;
+}
+
+.h3{
+    right: 30px;
+    top: 140px;
+}
+
+.h6{
+    bottom: 30px;
+    left: 50%;
+    margin-left: -9px;
+}
+
+.h9{
+    left: 30px;
+    top: 140px;
+}
+
+.diallines{
+    position: absolute;
+    z-index: 2;
+    width: 2px;
+    height: 15px;
+    background: #666666;
+    left: 50%;
+    margin-left: -1px;
+    transform-origin: 50% 150px;
+}
+
+.diallines:nth-of-type(5n) {
+    position: absolute;
+    z-index: 2;
+    width: 4px;
+    height: 15px;
+    background: #666666;
+    left: 50%;
+    margin-left: -1px;
+    transform-origin: 50% 150px;
+}
+
+.date{
+    position: absolute;
+    width: 120px;
+    height: 20px;
+    border-radius: 7px;
+    background-color:#888 ;
+    text-align: center;
+    line-height: 20px;
+    color: #ffffff;
+    font-size: 11px;
+    top: 80px;
+    left: 50%;
+    margin-left: -60px;
+    font-weight: 700;
+    z-index: 3;
+    letter-spacing: 3px;
+}
+
+.day{
+    position: absolute;
+    width: 120px;
+    height: 20px;
+    border-radius: 7px;
+    background-color:#888 ;
+    text-align: center;
+    line-height: 20px;
+    color: #ffffff;
+    font-size: 11px;
+    bottom: 80px;
+    left: 50%;
+    margin-left: -60px;
+    font-weight: 700;
+    z-index: 3;
+    letter-spacing: 3px;
+}
+
