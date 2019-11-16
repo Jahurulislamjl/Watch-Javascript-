@@ -29,5 +29,58 @@
         </div>
         <div class="diallines"></div> 
     </div>
+
+    <script>
+        var diallines = document.getElementsByClassName('diallines');
+        var clockE1 = document.getElementsByClassName('clock')[0];
+
+        for(var i=1; i< 60; i++){
+            clockE1.innerHTML += "<div class='diallines'></div>";
+
+            diallines[i].style.transform = "rotate("+6*i+"deg)";   
+        }
+
+        function clock(){
+            var weekday = new Array(7),
+
+            dt = new Date(),
+            hr = dt.getHours(),
+            min = dt.getMinutes(),
+            sec = dt.getSeconds(),
+            date = dt.getDate(),
+            month = dt.getmonth() + 1,
+            year = dt.getYear(),
+
+            hrDeg = hr * 30 + min * (360/720),
+            minDeg = min * 30 + sec * (360/720),
+            secDeg = sec * 6,
+
+            hrE1 = document.querySelector('.hour-hand'),
+            minE1 = document.querySelector('.minute-hand'),
+            secE1 = document.querySelector('.second-hand'),
+            dateE1 = document.querySelector('.date'),
+            dayE1 = document.querySelector('.day');
+
+
+            weekday[0] = "Sunday";
+            weekday[0] = "Monday";
+            weekday[0] = "Tuesday";
+            weekday[0] = "Wednesday";
+            weekday[0] = "Thursday";
+            weekday[0] = "Friday";
+            weekday[0] = "Saturday";
+
+            var day = weekday[dt.getDay()];
+            hrE1.style.transform = "rotate("+hrDeg+"deg)";
+            minE1.style.transform = "rotate("+minDeg+"deg)";
+            secE1.style.transform = "rotate("+secDeg+"deg)";
+            dateE1.innerHTML = date+"/"+month+"/"+year;
+            dayE1.innerHTML = day;
+
+
+        }
+      
+        setInterval("clock()", 1000);
+    </script>
 </body>
 </html>
